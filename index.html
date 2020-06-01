@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <!-- TAGS IMPORTANTES-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>APP calculadora</title>
+
+    <!-- Link externo css -->
+    <link rel="stylesheet" href="calculadora.css">
+
+    <!--Link externo Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+        <!-- corpo da calculadora -->
+        <div id="calculadora">
+            <!-- tela da calculadora -->
+            <input type="text" placeholder="0" name="display" id="tela" disabled>
+        
+             <!-- botões da calculadora -->
+             <div class="row ml-2">
+                 <button onclick="calcular('acao', 'c')" type="button" class="btn btn-dark clear">c</button>
+                 <button onclick="calcular('acao', '/')" type="button" class="btn btn-dark">/</button>
+                 <button onclick="calcular('acao', '*')" type="button" class="btn btn-dark">x</button>
+             </div>
+
+             <div class="row ml-2">
+                <button onclick="calcular('valor', 7)" type="button" class="btn btn-dark">7</button>
+                <button onclick="calcular('valor', 8)" type="button" class="btn btn-dark">8</button>
+                <button onclick="calcular('valor', 9)" type="button" class="btn btn-dark">9</button>
+                <button onclick="calcular('acao', '-')" type="button" class="btn btn-dark">-</button>
+            </div>
+
+            <div class="row ml-2">
+                <button onclick="calcular('valor', 4)" type="button" class="btn btn-dark">4</button>
+                <button onclick="calcular('valor', 5)" type="button" class="btn btn-dark">5</button>
+                <button onclick="calcular('valor', 6)" type="button" class="btn btn-dark">6</button>
+                <button onclick="calcular('acao', '+')" type="button" class="btn btn-dark">+</button>
+            </div>
+
+            <div class="row ml-2">
+                <button onclick="calcular('valor', 1)" type="button" class="btn btn-dark">1</button>
+                <button onclick="calcular('valor', 2)" type="button" class="btn btn-dark">2</button>
+                <button onclick="calcular('valor', 3)" type="button" class="btn btn-dark">3</button> 
+                <button onclick="calcular('acao', '=')" type="button" class="btn btn-dark enter">=</button>          
+            </div>               
+
+            <div class="row ml-2" style="margin-top: -52px;">
+                <button onclick="calcular('valor', 0)" type="button" class="btn btn-dark clear">0</button>
+                <button onclick="calcular('acao', '.')" type="button" class="btn btn-dark">.</button>
+            </div>
+        </div>
+
+        <p class="text-monospace lead">
+            Projeto desenvolvido como atividade de fixação do curso de JavaScript da Udemy.
+            A calculadora é ativada apenas pelo mouse
+        </p>
+
+    </div>
+   
+    <!-- Script externo -->
+    <script src="calculadora.js"></script>
+
+    <!-- Script Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>    
+</body>
+</html>
